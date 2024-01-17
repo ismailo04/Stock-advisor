@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/stock.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIS HACKS - Stock Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add global CSS styles here */
+        body {
+            margin: 0; /* Reset default margin for the body */
+            padding: 0; /* Reset default padding for the body */
+            font-family: Arial, sans-serif; /* Define a fallback font family */
+        }
+
+        /* Style the background image */
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+        }
+
+        /* Define CSS styles for the navigation menu */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            padding: 10px; /* Add some padding for the nav */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #434e61;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .nav-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-items a {
+            color: aliceblue;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Style the hero section */
+        .hero {
+            padding: 100px 0; /* Add some top and bottom padding */
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .hero button {
+            background-color: #007bff; /* Blue button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #submitButton{
+            display:inline-block;
+        }
+        #fetchDataButton{
+            display: inline-block;
+            margin: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">STOCK ADVISOR</div>  
+            
+    </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>Invest better with our stock predictor based on AI</h1>
+                <p>No need for a degree in finance to invest in stocks market anymore.</p>
+
+                <input type="text" id="inputText" placeholder="Enter your request">
+                <button id="submitButton">Predict!</button>
+                <div id="responseContainer">
+
+                </div>
+                
+                <div id="data-container"></div>
+                <button id="fetchDataButton">Fetch Data</button>
+                <div id="stockChart" style="width: 80%; height: 400px;"></div>
+
+
+                <script src="script.js"></script>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
